@@ -6,9 +6,6 @@ with open("data/day12.txt", "r") as infile:
     for line in infile:
         grid.append(list(line.strip()))
 
-directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-visited = set()
-
 grid_len = len(grid)
 grid_0_len = len(grid[0])
 
@@ -33,6 +30,8 @@ def get_node(target):
 
 start_node = get_node('S')
 end_node = get_node('E')
+directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+visited = set()
 queue = queue.Queue()
 queue.put((end_node, 0))
 min_level = None
