@@ -1,5 +1,4 @@
 rocks = set()
-sands = set()
 
 with open("data/day14.txt") as infile:
     for line in infile:
